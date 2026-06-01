@@ -1,0 +1,105 @@
+body {
+    background: #0f172a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+button {
+    background: #1e293b;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #334155;
+}
+
+input {
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform .2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nova classe que o JS vai adicionar só nos jogos ativos */
+.card.clickable {
+    cursor: pointer;
+}
+
+.card.clickable:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Força todas as imagens a terem a mesma proporção */
+    object-fit: cover;    /* Corta o excesso sem espremer a imagem */
+    display: block;
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-body h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background: #22c55e;
+    color: #0f172a;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.date-info {
+    color: #94a3b8;
+    font-size: 14px;
+    margin: auto 0 0 0; /* Substitui as múltiplas declarações de margin empurrando a data pro fundo */
+}
