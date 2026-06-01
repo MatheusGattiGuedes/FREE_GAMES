@@ -1,15 +1,6 @@
 {
   "promotions_now": [
     {
-      "title": "LONESTAR",
-      "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/lonestar-31p94_2560x1440-c6a104de10c14d33854d3018ccf8cc75",
-      "url": "https://store.epicgames.com/en-US/p/lonestar-83f143",
-      "end": "2026-06-04T15:00:00.000Z",
-      "original_price": "0",
-      "discount_price": "0",
-      "store": "Epic"
-    },
-    {
       "title": "Calico",
       "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/EGS_s2_2560x1440-79182ef9c56c44af95ab38b0a2c46329",
       "url": "https://store.epicgames.com/en-US/p/calico",
@@ -19,14 +10,13 @@
       "store": "Epic"
     },
     {
-      "title": "IQ Under Construction",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3771740/75f09654ecd47576900d091e6bfeea64784db147/capsule_231x87.jpg",
-      "url": "https://store.steampowered.com/app/3771740/IQ_Under_Construction/",
-      "end": null,
-      "original_price": "$2.99",
+      "title": "LONESTAR",
+      "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/lonestar-31p94_2560x1440-c6a104de10c14d33854d3018ccf8cc75",
+      "url": "https://store.epicgames.com/en-US/p/lonestar-83f143",
+      "end": "2026-06-04T15:00:00.000Z",
+      "original_price": "0",
       "discount_price": "0",
-      "is_free": true,
-      "store": "Steam"
+      "store": "Epic"
     },
     {
       "title": "Moonrise Fall",
@@ -47,22 +37,32 @@
       "discount_price": "0",
       "is_free": true,
       "store": "Steam"
+    },
+    {
+      "title": "IQ Under Construction",
+      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3771740/75f09654ecd47576900d091e6bfeea64784db147/capsule_231x87.jpg",
+      "url": "https://store.steampowered.com/app/3771740/IQ_Under_Construction/",
+      "end": null,
+      "original_price": "Pago",
+      "discount_price": "0",
+      "is_free": true,
+      "store": "Steam"
     }
   ],
   "next_week": [
     {
-      "title": "Mystery Game Week 23 Game 2",
+      "title": "Mystery Game Week 23 Game 1",
       "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/image23_1920x1080-570394ae470a43859ce7366ea875532f",
-      "url": "https://store.epicgames.com/en-US/p/megasale-mysterygame-2026-week23-game2",
+      "url": "https://store.epicgames.com/en-US/p/megasale-mysterygame-2026-week23-game1",
       "start": "2026-06-04T15:00:00.000Z",
       "original_price": "0",
       "discount_price": "0",
       "store": "Epic"
     },
     {
-      "title": "Mystery Game Week 23 Game 1",
+      "title": "Mystery Game Week 23 Game 2",
       "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/image23_1920x1080-570394ae470a43859ce7366ea875532f",
-      "url": "https://store.epicgames.com/en-US/p/megasale-mysterygame-2026-week23-game1",
+      "url": "https://store.epicgames.com/en-US/p/megasale-mysterygame-2026-week23-game2",
       "start": "2026-06-04T15:00:00.000Z",
       "original_price": "0",
       "discount_price": "0",
