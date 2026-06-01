@@ -194,12 +194,30 @@ else:
 # ==========================================
 # 5. SALVANDO O ARQUIVO FINAL
 # ==========================================
+games_now.sort(key=lambda x: x["url"])
+games_next.sort(key=lambda x: x["url"])
+
 output = {
     "promotions_now": games_now,
     "next_week": games_next
 }
 
-with open("games.json", "w", encoding="utf-8") as f:
-    json.dump(output, f, indent=2)
+conteudo_mudou = True
 
-print(f"Concluído! {len(games_now)} promoções ativas e {len(games_next)} jogos futuros salvos em games.json.")
+# Se o arquivo já existir, vamos ler e comparar logicamente com os dados novos
+if os.path.exists("games.json"):
+    try:
+        with open("games.json", "r", encoding="utf-8") as f:
+            dados_antigos = json.load(f)
+            if dados_antigos == output:
+                conteudo_mudou = False
+    except Exception:
+        pass
+
+# Só sobrescreve o arquivo se algo realmente mudou (jogo novo ou jogo que expirou)
+if conteudo_mudou:
+    with open("games.json", "w", encoding="utf-8") as f:
+        json.dump(output, f, indent=2)
+    print(f"Concluído! Modificações detectadas. games.json atualizado com {len(games_now)} jogos.")
+else:
+    print("Concluído! Nenhuma alteração nos jogos. O arquivo games.json foi mantido intacto.")
