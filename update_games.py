@@ -185,7 +185,7 @@ for jogo in games_now:
 if novos_jogos:
     print(f"Encontrei {len(novos_jogos)} jogos novos! Enviando notificação para o Telegram...")
     for novo_jogo in novos_jogos:
-        msg += f"*{novo_jogo['title']}*\n"
+        msg = f"*{novo_jogo['title']}*\n"
         msg += f"{novo_jogo['url']}"
         enviar_alerta_telegram(msg)
 else:
