@@ -8,6 +8,7 @@ import os
 # ==========================================
 TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
 
 def enviar_alerta_telegram(mensagem):
     if not TELEGRAM_TOKEN or not TELEGRAM_CHAT_ID:
@@ -24,6 +25,15 @@ def enviar_alerta_telegram(mensagem):
         requests.post(url, json=payload)
     except Exception as e:
         print(f"Erro ao enviar para o Telegram: {e}")
+
+def enviar_alerta_discord(mensagem):
+    if not DISCORD_WEBHOOK_URL:
+        return
+    payload = {"content": mensagem}
+    try:
+        requests.post(DISCORD_WEBHOOK_URL, json=payload)
+    except Exception as e:
+        print(f"Erro ao enviar para o Discord: {e}")
 
 # ==========================================
 # 1. LENDO JOGOS ANTIGOS (Para não notificar repetido)
@@ -188,6 +198,7 @@ if novos_jogos:
         msg = f"*{novo_jogo['title']}*\n"
         msg += f"{novo_jogo['url']}"
         enviar_alerta_telegram(msg)
+        enviar_alerta_discord(msg)
 else:
     print("Nenhum jogo novo encontrado desta vez.")
 
