@@ -5,9 +5,18 @@ on:
     - cron: '0 * * * *'
   workflow_dispatch: 
 
+# Permissões necessárias para o GitHub Pages funcionar neste mesmo arquivo
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   atualizar-dados:
     runs-on: ubuntu-latest
+    # Mapeia o output do script Python para que o próximo Job consiga ler
+    outputs:
+      autorizar_deploy: ${{ steps.passo_script.outputs.precisa_deploy }}
 
     steps:
       - name: Clonar o repositório
@@ -24,6 +33,7 @@ jobs:
           pip install requests beautifulsoup4 python-dotenv
 
       - name: Correr o Script
+        id: passo_script # ID adicionado para podermos capturar o output
         env:
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
@@ -37,3 +47,28 @@ jobs:
           git add games.json
           git commit -m "Automated: Jogos gratuitos atualizados" || echo "Sem alterações"
           git push
+
+  # NOVO JOB: Ele só roda se o Python der o sinal verde
+  publicar-pagina:
+    needs: atualizar-dados
+    # Condição: Só executa se o output do job anterior for exatamente 'true'
+    if: needs.atualizar-dados.outputs.autorizar_deploy == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar o repositório (atualizado)
+        uses: actions/checkout@v4
+        with:
+          ref: 'main' # Garante que vai pegar o games.json que acabou de ser commitado acima
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v4
+
+      - name: Empacotar Artefato do Site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # Se o seu index.html e games.json estão na raiz, deixe '.'
+                    # Se estiverem em uma pasta como 'public' ou 'dist', mude para './public'
+
+      - name: Deploy para GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
