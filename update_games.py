@@ -185,25 +185,7 @@ except Exception as e:
     print(f"Erro ao buscar na Steam: {e}")
 
 # ==========================================
-# 4. VERIFICANDO NOVIDADES E NOTIFICANDO
-# ==========================================
-novos_jogos = []
-for jogo in games_now:
-    if jogo["url"] not in jogos_conhecidos:
-        novos_jogos.append(jogo)
-
-if novos_jogos:
-    print(f"Encontrei {len(novos_jogos)} jogos novos! Enviando notificação para o Telegram...")
-    for novo_jogo in novos_jogos:
-        msg = f"*{novo_jogo['title']}*\n"
-        msg += f"{novo_jogo['url']}"
-        enviar_alerta_telegram(msg)
-        enviar_alerta_discord(msg)
-else:
-    print("Nenhum jogo novo encontrado desta vez.")
-
-# ==========================================
-# 5. INDIEGALA
+# 4. INDIEGALA
 # ==========================================
 print("Buscando jogos da IndieGala...")
 url_indiegala = "https://freebies.indiegala.com/"
@@ -243,6 +225,24 @@ try:
             
 except Exception as e:
     print(f"Erro ao buscar na IndieGala: {e}")
+
+# ==========================================
+# 5. VERIFICANDO NOVIDADES E NOTIFICANDO
+# ==========================================
+novos_jogos = []
+for jogo in games_now:
+    if jogo["url"] not in jogos_conhecidos:
+        novos_jogos.append(jogo)
+
+if novos_jogos:
+    print(f"Encontrei {len(novos_jogos)} jogos novos! Enviando notificação para o Telegram...")
+    for novo_jogo in novos_jogos:
+        msg = f"*{novo_jogo['title']}*\n"
+        msg += f"{novo_jogo['url']}"
+        enviar_alerta_telegram(msg)
+        enviar_alerta_discord(msg)
+else:
+    print("Nenhum jogo novo encontrado desta vez.")
 
 # ==========================================
 # 6. SALVANDO O ARQUIVO FINAL
