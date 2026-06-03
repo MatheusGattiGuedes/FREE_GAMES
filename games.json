@@ -1,46 +1,6 @@
 {
   "promotions_now": [
     {
-      "title": "Carlos the Taco",
-      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/7685a903-2344-4755-996b-66c423a813c9/prodmain/1756472525.png",
-      "url": "https://freebies.indiegala.com/carlos-the-taco",
-      "end": null,
-      "original_price": "Pago",
-      "discount_price": "0",
-      "is_free": true,
-      "store": "IndieGala"
-    },
-    {
-      "title": "Die Young: Prologue",
-      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/6ba4b90d-ec12-4343-bd6f-415f0881ebae/prodmain/1574430858.png",
-      "url": "https://freebies.indiegala.com/die-young-prologue",
-      "end": null,
-      "original_price": "Pago",
-      "discount_price": "0",
-      "is_free": true,
-      "store": "IndieGala"
-    },
-    {
-      "title": "Mr.Brocco & Co",
-      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/23d2ad9f-ce20-4049-9544-87b781aac366/prodmain/1758361240.png",
-      "url": "https://freebies.indiegala.com/mrbrocco-co",
-      "end": null,
-      "original_price": "Pago",
-      "discount_price": "0",
-      "is_free": true,
-      "store": "IndieGala"
-    },
-    {
-      "title": "The Brave Little Cloud",
-      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/92d9cb63-ef57-4bbb-90c5-372023e28b84/prodmain/1757077337.png",
-      "url": "https://freebies.indiegala.com/the-brave-little-cloud",
-      "end": null,
-      "original_price": "Pago",
-      "discount_price": "0",
-      "is_free": true,
-      "store": "IndieGala"
-    },
-    {
       "title": "Calico",
       "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/EGS_s2_2560x1440-79182ef9c56c44af95ab38b0a2c46329",
       "url": "https://store.epicgames.com/en-US/p/calico",
