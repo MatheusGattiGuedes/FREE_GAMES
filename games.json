@@ -1,6 +1,46 @@
 {
   "promotions_now": [
     {
+      "title": "Carlos the Taco",
+      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/7685a903-2344-4755-996b-66c423a813c9/prodmain/1756472525.png",
+      "url": "https://freebies.indiegala.com/carlos-the-taco",
+      "end": null,
+      "original_price": "Pago",
+      "discount_price": "0",
+      "is_free": true,
+      "store": "IndieGala"
+    },
+    {
+      "title": "Die Young: Prologue",
+      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/6ba4b90d-ec12-4343-bd6f-415f0881ebae/prodmain/1574430858.png",
+      "url": "https://freebies.indiegala.com/die-young-prologue",
+      "end": null,
+      "original_price": "Pago",
+      "discount_price": "0",
+      "is_free": true,
+      "store": "IndieGala"
+    },
+    {
+      "title": "Mr.Brocco & Co",
+      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/23d2ad9f-ce20-4049-9544-87b781aac366/prodmain/1758361240.png",
+      "url": "https://freebies.indiegala.com/mrbrocco-co",
+      "end": null,
+      "original_price": "Pago",
+      "discount_price": "0",
+      "is_free": true,
+      "store": "IndieGala"
+    },
+    {
+      "title": "The Brave Little Cloud",
+      "image": "https://www.indiegalacdn.com/imgs/devs/freebies/products/92d9cb63-ef57-4bbb-90c5-372023e28b84/prodmain/1757077337.png",
+      "url": "https://freebies.indiegala.com/the-brave-little-cloud",
+      "end": null,
+      "original_price": "Pago",
+      "discount_price": "0",
+      "is_free": true,
+      "store": "IndieGala"
+    },
+    {
       "title": "Calico",
       "image": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/EGS_s2_2560x1440-79182ef9c56c44af95ab38b0a2c46329",
       "url": "https://store.epicgames.com/en-US/p/calico",
@@ -20,7 +60,7 @@
     },
     {
       "title": "Drift86",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1070580/capsule_231x87.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1070580/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/1070580/Drift86/",
       "end": null,
       "original_price": "$1.99",
@@ -30,7 +70,7 @@
     },
     {
       "title": "Tell Me Why",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1180660/capsule_231x87.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1180660/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/1180660/Tell_Me_Why/",
       "end": null,
       "original_price": "$19.99",
@@ -40,7 +80,7 @@
     },
     {
       "title": "Tell Me Why: Chapter 2",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1238430/capsule_231x87.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238430/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/1238430/Tell_Me_Why_Chapter_2/",
       "end": null,
       "original_price": "Pago",
@@ -50,7 +90,7 @@
     },
     {
       "title": "Tell Me Why: Chapter 3",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1266670/capsule_231x87.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1266670/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/1266670/Tell_Me_Why_Chapter_3/",
       "end": null,
       "original_price": "Pago",
@@ -60,7 +100,7 @@
     },
     {
       "title": "Winexy",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/577740/capsule_231x87.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/577740/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/577740/Winexy/",
       "end": null,
       "original_price": "$4.99",
@@ -70,7 +110,7 @@
     },
     {
       "title": "Gravity Circuit",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/858710/761b419aab1804e49a9c53aca340c3a879ec3639/capsule_231x87_alt_assets_0.jpg",
+      "image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/858710/761b419aab1804e49a9c53aca340c3a879ec3639/capsule_231x87_alt_assets_0.jpg",
       "url": "https://store.steampowered.com/app/858710/Gravity_Circuit/",
       "end": null,
       "original_price": "$18.68",
