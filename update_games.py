@@ -203,7 +203,49 @@ else:
     print("Nenhum jogo novo encontrado desta vez.")
 
 # ==========================================
-# 5. SALVANDO O ARQUIVO FINAL
+# 5. INDIEGALA
+# ==========================================
+print("Buscando jogos da IndieGala...")
+url_indiegala = "https://freebies.indiegala.com/"
+
+try:
+    response_indiegala = requests.get(url_indiegala, headers=headers)
+    response_indiegala.raise_for_status()
+    soup_ig = BeautifulSoup(response_indiegala.text, 'html.parser')
+    
+    # Buscando os blocos internos de produto conforme o HTML fornecido
+    resultados_ig = soup_ig.find_all('div', class_='products-col-inner')
+    
+    for item in resultados_ig:
+        # Pega a URL do jogo
+        link_tag = item.find('a', class_='fit-click')
+        game_url = link_tag.get('href') if link_tag else None
+        
+        # Pega o Título
+        title_elem = item.find('div', class_='product-title')
+        title = title_elem.text.strip() if title_elem else "IndieGala Freebie"
+        
+        # Pega a URL da imagem (Lazy load data-img-src)
+        img_tag = item.find('img', class_='async-img-load')
+        image_url = img_tag.get('data-img-src') if img_tag else ""
+        
+        if game_url:
+            games_now.append({
+                "title": title,
+                "image": image_url,
+                "url": game_url,
+                "end": None,
+                "original_price": "Pago", # IndieGala freebies não mostram o preço original de forma simples
+                "discount_price": "0",
+                "is_free": True,
+                "store": "IndieGala"
+            })
+            
+except Exception as e:
+    print(f"Erro ao buscar na IndieGala: {e}")
+
+# ==========================================
+# 6. SALVANDO O ARQUIVO FINAL
 # ==========================================
 games_now.sort(key=lambda x: x["url"])
 games_next.sort(key=lambda x: x["url"])
