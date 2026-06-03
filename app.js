@@ -167,7 +167,7 @@ function render() {
                 // timer = `<p class="date-info">Começa: ${start.toLocaleDateString()}</p>`
 
                 // Sendo um jogo futuro, ele NÃO recebe o onclick nem a classe .clickable
-            } else if (game.store === "Steam") {
+            } else if (game.store === "Steam" || game.store === "IndieGala") {
                 card.onclick = () => window.open(game.url, "_blank")
                 card.classList.add("clickable")
             }
