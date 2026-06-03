@@ -59,16 +59,6 @@
       "store": "Epic"
     },
     {
-      "title": "Drift86",
-      "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1070580/capsule_231x87.jpg",
-      "url": "https://store.steampowered.com/app/1070580/Drift86/",
-      "end": null,
-      "original_price": "Pago",
-      "discount_price": "0",
-      "is_free": true,
-      "store": "Steam"
-    },
-    {
       "title": "Tell Me Why",
       "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1180660/capsule_231x87.jpg",
       "url": "https://store.steampowered.com/app/1180660/Tell_Me_Why/",
